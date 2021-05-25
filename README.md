@@ -42,7 +42,7 @@ class AnimationControllerHandle extends ChangeNotifier{
 }
 ```
 ```dart
-  Consumer<AnimationController,AnimationControllerHandle>(
+  Consumer2<AnimationController,AnimationControllerHandle>(
     builder: (context,animation,notify,child){
       return Positioned(
         child:child!,
