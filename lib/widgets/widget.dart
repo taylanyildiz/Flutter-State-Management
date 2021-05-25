@@ -1,3 +1,3 @@
-export 'dot_widget.dart';
-export 'up_icon_widget.dart';
-export 'dot_vertical.dart';
+export 'vertical_dot.dart';
+export 'vertical_up_icon.dart';
+export 'map_image.dart';

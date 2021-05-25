@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(title: 'Flutter State Management.'),
+      home: HomeScreen(title: 'Flutter State Management'),
     );
   }
 }
