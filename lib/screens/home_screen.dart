@@ -47,7 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               width: size.width * .7,
               child: MaterialButton(
-                onPressed: () => print(''),
+                onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BlocExam())),
                 child: Text('Bloc Exam'),
                 color: Colors.blue,
                 textColor: Colors.white,

@@ -168,9 +168,10 @@ class _ProviderExamState extends State<ProviderExam>
               children: [
                 Consumer<AnimationController>(
                   builder: (context, animation, child) {
-                    if (animation.status != AnimationStatus.completed) {
+                    if (animation.status != AnimationStatus.completed &&
+                        animation.value < .5) {
                       _controllerDrag.repeat();
-                    } else {
+                    } else if (animation.value > .5) {
                       _controllerDrag.stop();
                     }
                     return AnimatedBuilder(
@@ -204,7 +205,8 @@ class _ProviderExamState extends State<ProviderExam>
                   if (animation.status == AnimationStatus.completed) {
                     _controllerClick.repeat();
                   }
-                  if (notify.value > 0) {
+                  if (notify.value > 0 ||
+                      animation.status == AnimationStatus.dismissed) {
                     _controllerClick.stop();
                   }
 

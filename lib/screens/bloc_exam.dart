@@ -1,36 +1,33 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_state_management/models/mobx_model.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_state_management/models/counter_bloc.dart';
 
-class MobXExam extends StatefulWidget {
+class BlocExam extends StatefulWidget {
   @override
-  _MobXExamState createState() => _MobXExamState();
+  _BlocExamState createState() => _BlocExamState();
 }
 
-class _MobXExamState extends State<MobXExam> {
-  final counter = Counter();
+class _BlocExamState extends State<BlocExam> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MobX Exam'),
+        title: Text('Bloc Exam'),
         centerTitle: true,
         leading: IconButton(
-          onPressed: () =>
-              Navigator.popUntil(context, (route) => route.isFirst),
           icon: Icon(Icons.arrow_back_ios),
           color: Colors.white,
+          onPressed: () =>
+              Navigator.popUntil(context, (route) => route.isFirst),
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Observer(
-              builder: (_) => Text(
-                '${counter.value}',
+            BlocBuilder<CounterBloc, int>(
+              builder: (context, value) => Text(
+                '${value}',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 25.0,
@@ -40,16 +37,16 @@ class _MobXExamState extends State<MobXExam> {
             SizedBox(height: 20.0),
             MaterialButton(
               child: Text('Increment'),
-              color: Colors.blue,
+              color: Colors.red,
               textColor: Colors.white,
-              onPressed: () => counter.increment(),
+              onPressed: () => context.read<CounterBloc>().increment(),
             ),
             MaterialButton(
               child: Text('Decrease'),
-              color: Colors.orange,
+              color: Colors.blueAccent,
               textColor: Colors.white,
-              onPressed: () => counter.decrease(),
-            ),
+              onPressed: () => context.read<CounterBloc>().decrease(),
+            )
           ],
         ),
       ),

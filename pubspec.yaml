@@ -1,5 +1,5 @@
 name: flutter_state_management
-description: A new Flutter project.
+description: Provider, Bloc and MobX. Example
 
 publish_to: 'none'
 
@@ -15,6 +15,12 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   provider:
+
+  mobx:
+  flutter_mobx:
+  build_runner:
+
+  flutter_bloc:
 
 dev_dependencies:
   flutter_test:
