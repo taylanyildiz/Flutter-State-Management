@@ -5,7 +5,7 @@ Provider, Bloc and MobX. Example
 
 |              App Display             | 
 | :----------------------------------: | 
-| <a  target="_blank"><img src="https://user-images.githubusercontent.com/37551474/119607169-7f4b9480-bdfc-11eb-963f-b06ecc0968f3.gif" width:250></a> | 
+| <a  target="_blank"><img src="https://user-images.githubusercontent.com/37551474/119607169-7f4b9480-bdfc-11eb-963f-b06ecc0968f3.gif" width:'200'></a> | 
 
 ## Pubspec.yaml
  - [yaml](https://github.com/taylanyildiz/Flutter-State-Management/blob/master/pubspec.yaml)
