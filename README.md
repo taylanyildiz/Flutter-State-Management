@@ -152,6 +152,18 @@ late AnimationController _controller;
 ## MobX Exam
 
 - It cannot be called from every page. It only works in the class it is called from.
+- run 'flutter packages pub run build_runner [watch] or [build]'
+- If you get error
+- Changing the [analyzer] version in [pubspec.lock](https://github.com/taylanyildiz/Flutter-State-Management/blob/master/pubspec.lock) file to 1.5.0 seems to fix the issue.
+```lock
+  analyzer:
+  dependency: transitive
+  description:
+    name: analyzer
+    url: "https://pub.dartlang.org"
+  source: hosted
+  version: "1.5.0"
+```
 
 - How to create [MobX] class
 
